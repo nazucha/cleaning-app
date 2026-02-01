@@ -8,7 +8,13 @@ try { require('dotenv').config(); } catch (e) { /* dotenvがなくても本番�
 
 const express = require("express");
 const cors = require("cors");
-const { LangchainToolSet } = require("composio-core");
+let LangchainToolSet;
+try {
+  LangchainToolSet = require("composio-core").LangchainToolSet;
+} catch (e) {
+  console.warn('[Composio] composio-core の読み込みに失敗しました。Google Sheets/Calendar連携は無効です:', e.message);
+  LangchainToolSet = null;
+}
 const nodemailer = require("nodemailer");
 
 const app = express();
@@ -123,7 +129,7 @@ ${formData.notes ? `■ 備考\n${formData.notes}` : ''}
   }
 };
 
-const toolSet = new LangchainToolSet({ apiKey: COMPOSIO_API_KEY });
+const toolSet = LangchainToolSet ? new LangchainToolSet({ apiKey: COMPOSIO_API_KEY }) : null;
 
 // Google Chatに通知を送信する関数
 const sendGoogleChatNotification = async (formData) => {
@@ -192,16 +198,21 @@ app.post("/api/submit", async (req, res) => {
     const name = sheetName || "畑山";
     const range = `${name}!A:Z`;
 
-    const response = await toolSet.executeAction({
-      action: "GOOGLESHEETS_SPREADSHEETS_VALUES_APPEND",
-      params: {
-        spreadsheetId: sid,
-        range,
-        valueInputOption: "USER_ENTERED",
-        values: [data],
-      },
-      entityId: "default",
-    });
+    let response = null;
+    if (toolSet) {
+      response = await toolSet.executeAction({
+        action: "GOOGLESHEETS_SPREADSHEETS_VALUES_APPEND",
+        params: {
+          spreadsheetId: sid,
+          range,
+          valueInputOption: "USER_ENTERED",
+          values: [data],
+        },
+        entityId: "default",
+      });
+    } else {
+      console.warn('[Composio] toolSetが利用できないため、Google Sheetsへの書き込みをスキップしました');
+    }
 
     // Google Sheetsへの送信成功後、Google Chatに通知を送信
     let chatNotificationResult = { success: false, skipped: true };
@@ -246,6 +257,10 @@ app.post("/api/check-availability", async (req, res) => {
 
     const dateTime = new Date(`${date}T${time}`);
     const endDateTime = new Date(dateTime.getTime() + 2 * 60 * 60 * 1000);
+
+    if (!toolSet) {
+      return res.json({ success: true, available: true, message: "カレンダー連携は利用できません（空きありとみなします）" });
+    }
 
     try {
       const response = await toolSet.executeAction({
@@ -1006,6 +1021,11 @@ app.get("/api/get-drain-pipe-options", async (req, res) => {
     const range = `${sheetName}!A110:A128`;
 
     console.log(`[排水管洗浄オプション] 取得範囲: ${range}`);
+
+    if (!toolSet) {
+      console.warn('[排水管洗浄オプション] Composioが利用できないため、デフォルトの選択肢を返します');
+      return res.json({ success: true, options: [] });
+    }
 
     const response = await toolSet.executeAction({
       action: "GOOGLESHEETS_SPREADSHEETS_VALUES_GET",

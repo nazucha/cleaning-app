@@ -32,7 +32,9 @@
     "react-native-web": "^0.21.2",
     "cors": "^2.8.6",
     "express": "^4.22.1",
-    "@langchain/core": "^0.3.0"
+    "@langchain/core": "^0.3.0",
+    "axios": "^1.6.0",
+    "composio-core": "^0.5.39"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
