@@ -1291,14 +1291,6 @@ export default function App() {
   }, [getModelOptions]);
   
 
-  // ひらがなをカタカナに変換する関数
-  const convertToKatakana = (text: string): string => {
-    return text.replace(/[\u3041-\u3096]/g, (match) => {
-      // ひらがなをカタカナに変換（文字コード差は0x60）
-      return String.fromCharCode(match.charCodeAt(0) + 0x60);
-    });
-  };
-
   // 一般的なエアコンの型番パターン（参考サイトから）
   const commonModelPatterns = [
     // 三菱電機
@@ -3197,9 +3189,7 @@ export default function App() {
                     return newErrors;
                   });
                 }
-                // ひらがなをカタカナに変換
-                const katakanaText = convertToKatakana(text);
-                updateFormData('customerNameKana', katakanaText);
+                updateFormData('customerNameKana', text);
               }}
             placeholder="入力してください"
             placeholderTextColor="#999"
