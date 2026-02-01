@@ -3,8 +3,8 @@
  * フォームデータを受け取り、「畑山」シートの末尾に1行追加します。
  */
 
-// 環境変数を.envファイルから読み込む
-require('dotenv').config();
+// 環境変数を.envファイルから読み込む（ローカル用、本番では環境変数を直接使用）
+try { require('dotenv').config(); } catch (e) { /* dotenvがなくても本番では問題なし */ }
 
 const express = require("express");
 const cors = require("cors");
@@ -12,8 +12,8 @@ const { LangchainToolSet } = require("composio-core");
 const nodemailer = require("nodemailer");
 
 const app = express();
-// ポート3000を明示的に使用（.envファイルのPORT設定を無視）
-const PORT = 3000;
+// Railway等の本番環境では process.env.PORT を使用、ローカルでは3000
+const PORT = process.env.PORT || 3000;
 
 const COMPOSIO_API_KEY = process.env.COMPOSIO_API_KEY || "ak_aWhVHx6ydUMXsYHsckab";
 const SPREADSHEET_ID = process.env.SPREADSHEET_ID || "1aWMoYwabogOwSP3xo1EreMesqP0JN1yFGWPmCC5wK-E";
