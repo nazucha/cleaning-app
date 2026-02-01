@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="清掃サービス（エアコン清掃など）のお問い合わせフォームです。" />
+  <title>清掃サービス問い合わせ</title>
+  <style>
+    html, body, #root {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+      background-color: #f5f5f5;
+    }
+    #root {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+  <script>
+    // デバッグ用
+    console.log('=== HTML loaded ===');
+    console.log('Root element:', document.getElementById('root'));
+    
+    // エラーハンドラー
+    window.addEventListener('error', function(e) {
+      console.error('=== Global Error ===', e.error);
+    });
+    
+    // バンドル読み込み後の確認
+    window.addEventListener('load', function() {
+      console.log('=== Window loaded ===');
+      setTimeout(function() {
+        const root = document.getElementById('root');
+        console.log('Root after 2s:', root);
+        console.log('Root children:', root ? root.children.length : 0);
+      }, 2000);
+    });
+  </script>
+  <script src="/node_modules/expo/AppEntry.bundle?platform=web&dev=true&hot=false&lazy=true&transform.engine=hermes&transform.routerRoot=app&unstable_transformProfile=hermes-stable"></script>
+</body>
+</html>

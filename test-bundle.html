@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>バンドルテスト</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 20px;
+      background: #f5f5f5;
+    }
+    #status {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+    .success { color: #4CAF50; }
+    .error { color: #f44336; }
+  </style>
+</head>
+<body>
+  <div id="status">
+    <h2>バンドル読み込みテスト</h2>
+    <p id="result">読み込み中...</p>
+  </div>
+  <div id="root"></div>
+  
+  <script>
+    const statusEl = document.getElementById('result');
+    const rootEl = document.getElementById('root');
+    
+    // バンドルのURL
+    const bundleUrl = '/node_modules/expo/AppEntry.bundle?platform=web&dev=true&hot=false&lazy=true&transform.engine=hermes&transform.routerRoot=app&unstable_transformProfile=hermes-stable';
+    
+    // バンドルを読み込む
+    const script = document.createElement('script');
+    script.src = bundleUrl;
+    script.onload = function() {
+      statusEl.innerHTML = '<span class="success">✓ バンドルが正常に読み込まれました</span>';
+      statusEl.innerHTML += '<br>React Native Webのレンダリングを待っています...';
+      
+      // 5秒後にroot要素を確認
+      setTimeout(function() {
+        if (rootEl && rootEl.children.length > 0) {
+          statusEl.innerHTML += '<br><span class="success">✓ アプリがレンダリングされました</span>';
+        } else {
+          statusEl.innerHTML += '<br><span class="error">✗ アプリがレンダリングされていません</span>';
+          statusEl.innerHTML += '<br>コンソールでエラーを確認してください';
+        }
+      }, 5000);
+    };
+    script.onerror = function() {
+      statusEl.innerHTML = '<span class="error">✗ バンドルの読み込みに失敗しました</span>';
+      statusEl.innerHTML += '<br>URL: ' + bundleUrl;
+    };
+    document.head.appendChild(script);
+    
+    // エラーハンドラー
+    window.addEventListener('error', function(e) {
+      statusEl.innerHTML += '<br><span class="error">エラー: ' + (e.error ? e.error.toString() : 'Unknown error') + '</span>';
+      console.error('Global error:', e.error);
+    });
+  </script>
+</body>
+</html>

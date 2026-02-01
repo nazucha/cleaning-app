@@ -1,0 +1,402 @@
+{
+  "manufacturer": "ダイキン",
+  "source": "https://iair-c.com/manual/daikin/index-daikin/",
+  "lastUpdated": "2026-01-25",
+  "modelDetails": {
+    "AJT": [
+      "AJT-SEP",
+      "AJT-SES",
+      "AJT-SNP",
+      "AJT-SNS",
+      "AJT-TNS"
+    ],
+    "AN": [
+      "AN"
+    ],
+    "ANC": [
+      "ANC-HNS"
+    ],
+    "ATA": [
+      "ATA-SPE3",
+      "ATA-SSE3"
+    ],
+    "ATC": [
+      "ATC-LPE7",
+      "ATC-LSE7",
+      "ATC-RPE2",
+      "ATC-RSE2",
+      "ATC-SPE3",
+      "ATC-SSE3"
+    ],
+    "ATD": [
+      "ATD-EPV6",
+      "ATD-ESV6"
+    ],
+    "ATE": [
+      "ATE-LSE7",
+      "ATE-MPE8",
+      "ATE-MSE8",
+      "ATE-NSE9",
+      "ATE-SPE3",
+      "ATE-SSE3"
+    ],
+    "ATN": [
+      "ATN-HSE4",
+      "ATN-KSE6"
+    ],
+    "ATP": [
+      "ATP-GPE",
+      "ATP-GSE"
+    ],
+    "ATR": [
+      "ATR-GPE",
+      "ATR-GSE",
+      "ATR-HPE4",
+      "ATR-HSE4",
+      "ATR-JPE5",
+      "ATR-JSE5",
+      "ATR-KPE6",
+      "ATR-KSE6",
+      "ATR-LPE7",
+      "ATR-LSE7",
+      "ATR-MPE8",
+      "ATR-MSE8",
+      "ATR-NPE9",
+      "ATR-NSE9",
+      "ATR-RPE2",
+      "ATR-RSE2",
+      "ATR-SPE3",
+      "ATR-SSE3"
+    ],
+    "ATS": [
+      "ATS-FPE1",
+      "ATS-FSE1"
+    ],
+    "ATUX": [
+      "ATUX-EPV6W",
+      "ATUX-ESV6W"
+    ],
+    "FAP": [
+      "FAP-A",
+      "FAP-AC",
+      "FAP-AL",
+      "FAP-BA",
+      "FAP-BB",
+      "FAP-CB",
+      "FAP-DA",
+      "FAP-DC"
+    ],
+    "FARP": [
+      "FARP-A",
+      "FARP-AL",
+      "FARP-CB"
+    ],
+    "FAYJ": [
+      "FAYJ-F",
+      "FAYJ-FA",
+      "FAYJ-FAH",
+      "FAYJ-FH",
+      "FAYJ-FHT",
+      "FAYJ-FHV",
+      "FAYJ-L",
+      "FAYJ-LH",
+      "FAYJ-LHT",
+      "FAYJ-LHV"
+    ],
+    "FAYP": [
+      "FAYP-B",
+      "FAYP-BH",
+      "FAYP-BHT",
+      "FAYP-BHV",
+      "FAYP-G",
+      "FAYP-M",
+      "FAYP-MC",
+      "FAYP-P",
+      "FAYP-PC"
+    ],
+    "FAYRP": [
+      "FAYRP-M",
+      "FAYRP-P"
+    ],
+    "FBP": [
+      "FBP-AL",
+      "FBP-ALP",
+      "FBP-CB",
+      "FBP-CBP"
+    ],
+    "FGEAP": [
+      "FGEAP-K"
+    ],
+    "FGEVP": [
+      "FGEVP-K"
+    ],
+    "FHBP": [
+      "FHBP-A",
+      "FHBP-AL",
+      "FHBP-CB",
+      "FHBP-DC"
+    ],
+    "FHCP": [
+      "FHCP-A",
+      "FHCP-AB",
+      "FHCP-AL",
+      "FHCP-AM",
+      "FHCP-BA",
+      "FHCP-BB",
+      "FHCP-BC",
+      "FHCP-BD",
+      "FHCP-CB",
+      "FHCP-CC",
+      "FHCP-DA",
+      "FHCP-EA",
+      "FHCP-EB",
+      "FHCP-EC",
+      "FHCP-ED",
+      "FHCP-EG",
+      "FHCP-EJ"
+    ],
+    "FHCXP": [
+      "FHCXP-A",
+      "FHCXP-AM",
+      "FHCXP-D"
+    ],
+    "FHGP": [
+      "FHGP-A",
+      "FHGP-AL",
+      "FHGP-BA",
+      "FHGP-CB",
+      "FHGP-DA",
+      "FHGP-DC"
+    ],
+    "FHKP": [
+      "FHKP-A",
+      "FHKP-AL",
+      "FHKP-BA",
+      "FHKP-CB",
+      "FHKP-DA",
+      "FHKP-DC",
+      "FHKP-DD"
+    ],
+    "FHMHP": [
+      "FHMHP-A",
+      "FHMHP-CB",
+      "FHMHP-CC"
+    ],
+    "FHMP": [
+      "FHMP-A",
+      "FHMP-AB",
+      "FHMP-AL",
+      "FHMP-BA",
+      "FHMP-CB",
+      "FHMP-CC",
+      "FHMP-DC"
+    ],
+    "FHNP": [
+      "FHNP-A",
+      "FHNP-AL",
+      "FHNP-CB",
+      "FHNP-DB",
+      "FHNP-DC",
+      "FHNP-DD"
+    ],
+    "FHP": [
+      "FHP-A",
+      "FHP-AC",
+      "FHP-AJ",
+      "FHP-AL",
+      "FHP-BA",
+      "FHP-CB",
+      "FHP-CC",
+      "FHP-DA",
+      "FHP-DC",
+      "FHP-DD",
+      "FHP-DG"
+    ],
+    "FHTP": [
+      "FHTP-A",
+      "FHTP-AL",
+      "FHTP-CB",
+      "FHTP-DC",
+      "FHTP-DD"
+    ],
+    "FHYBJ": [
+      "FHYBJ-F"
+    ],
+    "FHYCP": [
+      "FHYCP-H",
+      "FHYCP-K"
+    ],
+    "FHYMP": [
+      "FHYMP-M",
+      "FHYMP-P"
+    ],
+    "FHYP": [
+      "FHYP-M",
+      "FHYP-MS",
+      "FHYP-P"
+    ],
+    "FNYAJ": [
+      "FNYAJ-K",
+      "FNYAJ-KC"
+    ],
+    "FUP": [
+      "FUP-A",
+      "FUP-AL",
+      "FUP-AR",
+      "FUP-BA",
+      "FUP-BAK",
+      "FUP-CB",
+      "FUP-CBK",
+      "FUP-DC",
+      "FUP-DCK",
+      "FUP-DD",
+      "FUP-DDK"
+    ],
+    "FUYP": [
+      "FUYP-M",
+      "FUYP-MC",
+      "FUYP-MK",
+      "FUYP-P",
+      "FUYP-PC",
+      "FUYP-PK",
+      "FUYP-PR"
+    ],
+    "FVP": [
+      "FVP-A",
+      "FVP-AL",
+      "FVP-BB",
+      "FVP-CB",
+      "FVP-DC"
+    ],
+    "FVYCP": [
+      "FVYCP-B",
+      "FVYCP-M"
+    ],
+    "FXUP": [
+      "FXUP-M"
+    ],
+    "FXYAJ": [
+      "FXYAJ-K",
+      "FXYAJ-KC"
+    ],
+    "FXYAP": [
+      "FXYAP-KC",
+      "FXYAP-M",
+      "FXYAP-MA"
+    ],
+    "FXYCP": [
+      "FXYCP-M",
+      "FXYCP-MA",
+      "FXYCP-MR"
+    ],
+    "FXYDP": [
+      "FXYDP-M",
+      "FXYDP-MA"
+    ],
+    "FXYEP": [
+      "FXYEP-M"
+    ],
+    "FXYFP": [
+      "FXYFP-B",
+      "FXYFP-BA",
+      "FXYFP-MB",
+      "FXYFP-MC"
+    ],
+    "FXYHP": [
+      "FXYHP-MA",
+      "FXYHP-MAR",
+      "FXYHP-MB"
+    ],
+    "FXYKP": [
+      "FXYKP-M"
+    ],
+    "FXYMP": [
+      "FXYMP-A",
+      "FXYMP-AA",
+      "FXYMP-AB",
+      "FXYMP-AR",
+      "FXYMP-M",
+      "FXYMP-MA"
+    ],
+    "FXYSP": [
+      "FXYSP-M",
+      "FXYSP-MA"
+    ],
+    "FXYTP": [
+      "FXYTP-M",
+      "FXYTP-MA"
+    ],
+    "RTJ": [
+      "RTJ-FT",
+      "RTJ-FV",
+      "RTJ-LT",
+      "RTJ-LV"
+    ],
+    "RTYJ": [
+      "RTYJ-FT",
+      "RTYJ-FV",
+      "RTYJ-LT",
+      "RTYJ-LV"
+    ],
+    "RTZYJ": [
+      "RTZYJ-FT"
+    ],
+    "RZYP": [
+      "RZYP-BA",
+      "RZYP-BAE",
+      "RZYP-BAH",
+      "RZYP-BAT",
+      "RZYP-BATE",
+      "RZYP-BATH",
+      "RZYP-BAV",
+      "RZYP-BAVE",
+      "RZYP-BAVH",
+      "RZYP-BB",
+      "RZYP-BBE",
+      "RZYP-M",
+      "RZYP-MT",
+      "RZYP-MV",
+      "RZYP-P",
+      "RZYP-PT",
+      "RZYP-PV"
+    ],
+    "SDH": [
+      "SDH-B"
+    ],
+    "SSD": [
+      "SSD-KA"
+    ],
+    "SVYCP": [
+      "SVYCP-B",
+      "SVYCP-D",
+      "SVYCP-DF",
+      "SVYCP-F",
+      "SVYCP-FF",
+      "SVYCP-G",
+      "SVYCP-GF",
+      "SVYCP-J",
+      "SVYCP-JF"
+    ],
+    "SZVCP": [
+      "SZVCP-D",
+      "SZVCP-F",
+      "SZVCP-G",
+      "SZVCP-J",
+      "SZVCP-MK"
+    ],
+    "SZVYCP": [
+      "SZVYCP-A",
+      "SZVYCP-B",
+      "SZVYCP-D",
+      "SZVYCP-F",
+      "SZVYCP-G",
+      "SZVYCP-J"
+    ],
+    "UAV": [
+      "UAV-A"
+    ],
+    "UAVP": [
+      "UAVP-B"
+    ]
+  }
+}
