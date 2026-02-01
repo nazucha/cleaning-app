@@ -7,6 +7,7 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
+    "build": "expo export --platform web",
     "server": "node server.js",
     "eas:build": "eas build --profile development --platform ios"
   },
